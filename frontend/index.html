@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD de Contactos - AWS Lab</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Gestión de Contactos</h1>
+            <p>Laboratorio de Despliegue en AWS EC2 (Windows Server 2025)</p>
+        </header>
+
+        <section class="form-section">
+            <h2 id="form-title">Registrar Nuevo Contacto</h2>
+            <form id="contact-form">
+                <input type="hidden" id="contact-id">
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo *</label>
+                    <input type="text" id="nombre" required placeholder="Ej. Juan Pérez">
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono *</label>
+                    <input type="text" id="telefono" required placeholder="Ej. 987654321">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email (Opcional)</label>
+                    <input type="email" id="email" placeholder="Ej. juan@correo.com">
+                </div>
+                <div class="form-group">
+                    <label for="direccion">Dirección (Opcional)</label>
+                    <input type="text" id="direccion" placeholder="Ej. Av. Siempre Viva 123">
+                </div>
+                <div class="form-actions">
+                    <button type="submit" id="btn-submit" class="btn btn-primary">Guardar Contacto</button>
+                    <button type="button" id="btn-cancel" class="btn btn-secondary" style="display: none;">Cancelar Edición</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="list-section">
+            <div class="list-header">
+                <h2>Lista de Contactos</h2>
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Buscar por nombre o teléfono...">
+                </div>
+            </div>
+            <div class="table-container">
+                <table id="contacts-table">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Teléfono</th>
+                            <th>Email</th>
+                            <th>Dirección</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="contacts-body">
+                        <!-- Los contactos se cargarán aquí -->
+                        <tr>
+                            <td colspan="5" class="text-center">Cargando contactos...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <div id="message-container" class="message"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
