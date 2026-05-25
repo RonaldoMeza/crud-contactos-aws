@@ -76,7 +76,7 @@ Para desplegar este proyecto en una instancia EC2 con Windows Server 2025, sigue
 3. **Configurar MySQL:** Inicia MySQL en XAMPP y ejecuta el script SQL (`database/crud_contactos_aws.sql`) mediante phpMyAdmin o la consola de MySQL.
 4. **Clonar el proyecto:**
    ```bash
-   git clone <URL_DEL_REPOSITORIO>
+   git clone https://github.com/RonaldoMeza/crud-contactos-aws.git
    cd crud-contactos-aws
    ```
 5. **Configurar y levantar Backend:**
